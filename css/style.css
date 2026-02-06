@@ -2,6 +2,9 @@ body {
     background: #111;
     color: white;
     font-family: Arial;
+    margin: 0;
+    width: 90%;
+    margin: 0 auto;
 }
 
 div.music-list {
@@ -10,16 +13,23 @@ div.music-list {
     gap: 20px;
 }
 
-@media screen and (min-width: 700px) {
+/* @media screen and (min-width: 700px) {
     div.music-list {
         display: grid;
 
         grid-template-columns: 1fr 1fr;
     }
+} */
+
+.flex {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
 }
 
 .song-card {
-
+    display: flex;
+    justify-content: space-between;
     background: #222;
     padding: 15px;
     border-radius: 10px;
@@ -29,7 +39,13 @@ div.music-list {
 
 .song-card img {
     width: 100%;
+    max-width: 100px;
+    max-height: 100px;
     border-radius: 8px;
+}
+
+.song-card h3 {
+    width: 400px;
 }
 
 .song-card.playing {
@@ -42,7 +58,7 @@ div.music-list {
 
 .lyrics {
     position: absolute;
-    max-width: 400px;
+    max-width: 500px;
     max-height: 70%;
     background: green;
     background: #fff;
@@ -52,17 +68,43 @@ div.music-list {
     overflow: scroll;
     padding: 50px;
 }
+/* Власне скролбар */
+.lyrics::-webkit-scrollbar {
+  width: 12px;  /* ширина вертикальної смуги */
+  height: 12px; /* ширина горизонтальної смуги */
+}
+
+/* Фон смуги */
+.lyrics::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 6px;
+}
+
+/* Повзунок */
+.lyrics::-webkit-scrollbar-thumb {
+  background-color: green;
+  border-radius: 6px;
+  border: 2px solid #fff;
+  /* border: 3px solid #f0f0f0; відступ навколо повзунка */
+}
+
+/* При наведенні */
+.lyrics::-webkit-scrollbar-thumb:hover {
+  background-color: #234921;
+}
 
 .lyrics-text {
     position: relative;
     color: #000;
+    font-size: 20px;
     box-sizing: border-box;
 }
 
 .toggle-text {
+
     padding: 10px 15px;
     color: #fff;
-    width: 100%;
+    max-width: 100px;
     border: none;
     background: green;
 }

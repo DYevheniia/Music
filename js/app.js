@@ -11,8 +11,11 @@ songs.forEach(song => {
   card.className = "song-card";
 
   card.innerHTML = `
-    <img src="${song.cover}">
-    <h3>${song.title}</h3>
+    <div class="flex">
+        <img src="${song.cover}">
+        <h3>${song.title}</h3>
+    </div>
+    
 
     <button class="toggle-text">Show text</button>
 
