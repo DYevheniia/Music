@@ -1,0 +1,68 @@
+body {
+    background: #111;
+    color: white;
+    font-family: Arial;
+}
+
+div.music-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media screen and (min-width: 700px) {
+    div.music-list {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.song-card {
+
+    background: #222;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.song-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.song-card.playing {
+    outline: 2px solid lime;
+}
+
+.hidden {
+    display: none;
+}
+
+.lyrics {
+    position: absolute;
+    max-width: 400px;
+    max-height: 70%;
+    background: green;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    overflow: scroll;
+    padding: 50px;
+}
+
+.lyrics-text {
+    position: relative;
+    color: #000;
+    box-sizing: border-box;
+}
+
+.toggle-text {
+    padding: 10px 15px;
+    color: #fff;
+    width: 100%;
+    border: none;
+    background: green;
+}
