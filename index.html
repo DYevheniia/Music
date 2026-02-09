@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музика</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Музика</h1>
+        <div id="category-tabs" class="tabs"></div>
+    </header>
+
+    <main>
+        <div id="music-list" class="music-list"></div>
+    </main>
+
+    <div id="queue-popup" class="queue-popup hidden">
+        <div class="flex">
+            <h2>Черга відтворення</h2>
+            <div>
+                <button id="clear-queue">🗑️</button>
+                <button id="play-queue">▶︎</button>
+            </div>
+        </div>
+        <div id="queue-list" class="queue-list"></div>
+    </div>
+
+    <!-- Нижній плеєр -->
+    <div id="player" class="player">
+
+        <div class="player-info">
+            <h3 id="player-title">Назва пісні</h3>
+            <div class="player-controls flex">
+                <div><button id="player-start">⏏︎</button></div>
+                <div>
+                    <!-- <button id="player-prev">⏮</button> -->
+                    <button id="player-play">⏯︎</button>
+                    <!-- <button id="player-next">⏭</button> -->
+                </div>
+                <div>
+                    <button id="player-lyrics">🎤</button>
+                    <button id="queue-button">㊂</button>
+                </div>
+            </div>
+            <div class="player-time">
+                <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+            </div>
+            <input type="range" id="timeline" min="0" max="100" value="0">
+        </div>
+    </div>
+
+    <script src="songs.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
